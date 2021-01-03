@@ -86,18 +86,18 @@ const SignupForm = () => {
                 values
             ).then(data=>{
               setSubmitting(false)
-              console.log(data)
+              
   
               cartSeter(cart,data.data.cart,dispatch,data.data.token).then(result=>{
                 dispatch(AuthActions.login(data.data.token))
                 dispatch(AuthActions.checkAuthTimeOut(data.data.expirationTime))
                 dispatch(MessageActions.showMessage('You have successfully logged in. Go to MyAccount for more options'))
               }).catch(err=>{
-                console.log(err.response)
+               
               }) 
   
           }).catch(err=>{
-            console.log(err.response)
+           
             setloading(false)
             const errors={};
             if(err.response.status===422)

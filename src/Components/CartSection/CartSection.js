@@ -11,6 +11,7 @@ import * as MessageActions from '../../Store/messageActions'
 import * as AuthActions from '../../Store/authActions'
 import axios from "../Utility/axios";
 import TLoader from '../UI/TLoader'
+import { useHistory } from "react-router-dom";
 
 
 export default (props) => {
@@ -21,6 +22,7 @@ export default (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const dispatch = useDispatch()
   const [loading,setLoading] = useState(false)
+  const history = useHistory();
 
  
 
@@ -33,7 +35,7 @@ export default (props) => {
       Authorization:"Bearer "+token}})
       .then(resp=>{
         setLoading(false)
-        dispatch(MessageActions.setModal('Order Id: '+resp.data.orderId,resp.data.cartDetails,resp.data.totalPrice,'Order Recieved',()=>{console.log('tracking')},'Track Order',['Cart Total Rs.'+resp.data.totalPrice]))
+        dispatch(MessageActions.setModal('Order Id: '+resp.data.orderId,resp.data.cartDetails,resp.data.totalPrice,'Order Recieved',()=>{history.push('/dashboard/track');dispatch(MessageActions.hideMessage())},'Track Order',['Cart Total Rs.'+resp.data.totalPrice]))
       })
       .catch(err=>{
         setLoading(false)
@@ -56,12 +58,12 @@ export default (props) => {
       }})
       .then(resp=>{
         setLoading(false)
-        console.log(resp)
+    
         dispatch(MessageActions.setModal('Order Details',resp.data.cartDetails,resp.data.totalPrice,'Confirm Order',confrimOrder,'Order Now',['Cart Total Rs.'+resp.data.totalPrice]))
       })
       .catch(err=>{
         setLoading(false)
-        console.log(err.response)
+      
         if(err.response.status===401)
         {
           dispatch(AuthActions.logout())
@@ -82,13 +84,13 @@ export default (props) => {
       .post("/cart", cartItems)
       .then((data) => {
         setLoading(false)
-        console.log(data.data);
+     
         setProductList(data.data.cartDetails);
         setTotalPrice(data.data.totalPrice);
       })
       .catch((err) => {
         setLoading(false)
-        console.log(err);
+     
       });
   }, [cartItems, setProductList]);
   return (

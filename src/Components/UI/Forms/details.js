@@ -27,13 +27,13 @@ const SignupForm = () => {
     axios.get('/getdetails',{headers:{
       Authorization:'Bearer '+token
     }}).then(resp=>{
-      console.log(resp)
+     
       setLoader(false)
       setEmail(resp.data.email);
       setPhone(resp.data.phone);
       setUsername(resp.data.username);
     }).catch(err=>{
-       console.log(err.response)
+       
        dispatch(MessageActions.showMessage('Somenthing Went Wrong please try agian later'))
        dispatch(AuthActions.logout())
     })

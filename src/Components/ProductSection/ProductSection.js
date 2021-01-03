@@ -17,7 +17,7 @@ const ProductSection =  (props) => {
 
 
   // useEffect(()=>{
-  //   console.log('effect')
+  //   
   //   dispatch(itemAction.fetchItems())
   // },[dispatch])
 
@@ -29,7 +29,7 @@ const ProductSection =  (props) => {
   //      setSearchedProducts(data.data.products)
   //    })
   //    .catch(err=>{
-  //      console.log(err)
+  //     
   //    })
   // })
 

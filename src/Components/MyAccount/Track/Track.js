@@ -25,7 +25,7 @@ export default (props)=>{
   }
 
   const cancalOrder = (id,index)=>{
-       console.log(index)
+      
        setRequestLoader(true)
        axios.post('/updateorder',{
             id
@@ -41,10 +41,10 @@ export default (props)=>{
                   return orders
             })
             dispatch(MessageActions.showMessage('Order Cancaled Successfully'))
-            console.log(data)
+           
        }).catch(err=>{
             setRequestLoader(false)
-            console.log(err.response)
+          
        })
   }
 
@@ -59,7 +59,7 @@ export default (props)=>{
           })
           .catch(err=>{
                setLoading(false)
-               console.log(err.response)
+              
           })
    },[token])
    

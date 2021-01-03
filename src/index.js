@@ -39,8 +39,7 @@ let currentState ;
 store.subscribe(()=>{
   let prevState = currentState;
   currentState = store.getState()
-  console.log(currentState)
-  console.log(prevState)
+
 
   if(prevState)
   {
@@ -51,7 +50,7 @@ store.subscribe(()=>{
         axios.post('/setcart',{cart:currentState.cart},{headers:{
           Authorization:'Bearer '+currentState.auth.token
         }}).then(data=>{
-          console.log(data);
+        
         }).catch(err=>{
             store.dispatch(AuthActions.logout())
             store.dispatch(CartActions.setCart(prevState.cart))

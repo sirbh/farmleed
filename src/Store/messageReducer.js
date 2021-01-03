@@ -26,7 +26,6 @@ const reducer = (state = initialState, action) => {
       }
     }
     case actions.SET_MODAL:{
-      console.log(action.payload)
       return {
         message:'',
         isModal:true,

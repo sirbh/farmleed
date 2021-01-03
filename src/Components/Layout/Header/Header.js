@@ -18,7 +18,7 @@ export default (props) => {
   const history = useHistory();
 
   useEffect(()=>{
-    console.log('effect')
+  
     dispatch(itemAction.fetchItems(searchedProducts))
   },[dispatch,searchedProducts])
   return (

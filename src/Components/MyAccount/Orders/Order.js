@@ -23,13 +23,13 @@ export default (props)=>{
             Authorization:"Bearer "+token}})
              .then(data=>{
                 setLoading(false)
-                console.log('data',data)
+              
                 setOrders(data.data.orders)
                
              })
              .catch(err=>{
                 setLoading(false)
-                console.log(err.response)
+                
                 dispatch(MessageActions.showMessage('Somenthing Went Wrong please try agian later'))
                 dispatch(AuthActions.logout())
                 

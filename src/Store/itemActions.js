@@ -20,7 +20,7 @@ export const fetchItems = (query)=>{
        
        if(cancal)
        {
-           console.log('cancaled')
+        
            cancal()
        }
        dispatch(sendReq());
@@ -30,7 +30,7 @@ export const fetchItems = (query)=>{
            cancelToken: new mainAxios.CancelToken(c=>cancal = c)
        })
             .then(data=>{
-                // console.log(data.data)
+               
                 dispatch(loadItem(data.data))
             })
             .catch(error=>{

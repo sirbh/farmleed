@@ -55,7 +55,7 @@ const SignupForm = () => {
               values
           ).then(async (data)=>{
             setSubmitting(false)
-            console.log(data)
+           
 
             await cartSeter(cart,data.data.cart,dispatch,data.data.token).then(result=>{
               dispatch(AuthActions.login(data.data.token))
@@ -65,7 +65,7 @@ const SignupForm = () => {
             })
 
         }).catch(err=>{
-          console.log(err.response)
+          
           setloading(false)
           const errors={};
           if(err.response.status===422)

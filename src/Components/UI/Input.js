@@ -38,7 +38,7 @@ export default ({width,height,btnName,...props})=>{
     let btn = null;
     if(btnName)
     {
-        console.log('btn',btnName)
+       
         btn = <p className = {cssClasses.btn}>{btnName}</p>
     }
     return  <div style = {{position:'relative'}}> 

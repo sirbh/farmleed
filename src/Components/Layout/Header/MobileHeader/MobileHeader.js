@@ -13,7 +13,7 @@ export default (props) => {
   const history = useHistory()
   const dispatch = useDispatch()
   const quantity = useSelector(state=>state.cart.totalItems)
-  console.log(pathname)
+
   return (
     <div className={cssClasses.Header}>
         {pathname!=='/'? <div className={cssClasses.Nav} > <NavLink to="/" activeStyle={{ color: "#FACA0F" }} exact>
