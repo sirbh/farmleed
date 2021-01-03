@@ -5,13 +5,15 @@ import {NavLink, useLocation} from 'react-router-dom'
 import * as drawerActions from '../../Store/sideDrawerActions' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCross, faCut, faTimes } from "@fortawesome/free-solid-svg-icons";
+import * as CartActions from '../../Store/cartActions'
+import * as AuthActions from '../../Store/authActions'
+
 export default (props) => {
   const dispatch = useDispatch();
   const {pathname} = useLocation()
   const isAuth = useSelector(state =>state.auth.isAuth);
   const listNotAuth = [
     {
-      to: "/",
       title: "Login/SignUp",
       function:props.loginHandler
     }
@@ -28,6 +30,11 @@ export default (props) => {
     {
       to: "/dashboard/orders",
       title: "Orders",
+    },
+    {
+
+      title: "LogOut",
+      function:()=>{dispatch(AuthActions.logout());dispatch(CartActions.setCart({cartItems:[],totalItems:0}))}
     }
   ];
   
@@ -51,11 +58,11 @@ export default (props) => {
           {list.map((item,i)=>{
               if(item.function)
               {
-                return <li>
+                return <li key = {i}>
                 <NavLink to = {pathname} onClick={()=>{item.function()}}>{item.title}</NavLink>
              </li>
               }
-              return <li>
+              return <li key = {i}>
                  <NavLink to = {item.to}>{item.title}</NavLink>
               </li>
           })}
