@@ -1,0 +1,83 @@
+.NavLink
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: white;
+    a
+    {
+        color: inherit;
+
+    }
+    div
+    {
+        position: absolute;
+        top: 60px;
+        left: -37px;
+        background-color: white;
+        box-shadow: 1px 1px 4px #888888;
+        li
+        {
+           list-style: none;
+        }
+        ul
+        {
+            color: lightgrey;
+            text-decoration: none;
+            width: 100%;
+            height: 50px;
+            list-style-type: none;
+
+            button
+            {
+             
+                color: gray;
+                width: 100%;
+                font-size: 17px;
+                height: 100%;
+                border: none;
+                background:transparent;
+
+                &:hover
+                {
+                    background-color: #567E3A;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                &:focus
+                {
+                    outline: none;
+                }
+            }
+     
+            .LinkClass
+            {
+                display: block;
+                color: gray;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-bottom: 1px solid #ececec;
+
+                &:hover
+                {
+                    background-color:#567E3A ;
+                    color: white;
+                    
+                }
+               
+            }
+           
+        }
+    }
+    &:hover
+    {
+        color:#FACA0F;
+        cursor: pointer;
+    }
+}

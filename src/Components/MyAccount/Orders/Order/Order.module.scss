@@ -1,0 +1,88 @@
+.Order
+{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #EBECF0;
+    padding: 0px 20px;
+    color: #464646;
+    button
+    {
+        width: 90px;
+        height: 40px;
+        margin-right: 10px;
+        font-size: 20px;
+        color: white;
+        border: none;
+        &:focus
+        {
+            outline: none;
+        }
+        &:hover
+        {
+            cursor: pointer;
+            border:1px black solid
+        }
+    }
+
+    h4
+    {
+        width: 30%;
+        text-align: start;
+    }
+
+    h3
+    {
+        width: 35%;
+        text-align: start;
+    }
+
+    p
+    {
+        width: 15%;
+        text-align: start;
+    }
+
+    div
+    {
+        width: 20%;
+        display: flex;
+        justify-content: start;
+
+        p
+        {
+            width: 40%;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .Order
+    {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 170px;
+        width: 100%;
+        h3,h4,p
+        {
+            width: 100%;
+            
+        }
+        div
+        {
+            width: 65%;
+        }
+        h3
+        {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.CartBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    input {
+      width: 25px;
+      height: 25px;
+      margin: 0px 20px;
+      text-align: center;
+    }
+    p {
+      border: solid black 1px;
+      padding: 4px 10px;
+      text-align: center;
+      margin: 0px 15px;
+    }
+    button {
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: lightgray;
+      font-size: 30px;
+      color: white;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        background-color: #faca0f;
+      }
+    }
+  }
+  
+  img {
+    width: 100px;
+  }
+  
+  td {
+    button {
+      border: none;
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  

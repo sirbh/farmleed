@@ -1,0 +1,35 @@
+.Form
+{
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 70px;
+   
+    input
+    {
+        padding: 0px 0px 0px 0px;
+    }
+
+
+    label
+    {
+        text-align: start;
+        color: gray;
+        display: block;
+        margin-top: 40px;
+    }
+
+    button
+    {
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .Form
+    {
+        width: 95%;
+        margin-left: 10px;
+    }
+}

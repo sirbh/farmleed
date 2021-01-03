@@ -1,0 +1,71 @@
+.Main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80vh;
+    width: 90%;
+    margin: 80px auto;
+    position: relative;
+    .Side
+    {
+        width: 20%;
+        // background-color: gray;
+        padding-top: 40px;
+        padding-left: 10px;
+        h2
+        {
+            font-size: 25px;
+            font-weight: lighter;
+            text-align: start;
+            margin-bottom: 50px;
+            text-decoration: underline;
+        }
+
+        button
+        {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+    }
+
+
+}
+
+
+
+ .Link
+ {
+     text-align: start;
+     display: block;
+     text-decoration: none;
+     color:black;
+     padding-left: 5px;
+     font-size: 20px;
+     margin: 10px 0px;
+     width: 80%;
+     &:hover
+     {
+        background-color: #567E3A;
+        color: white;
+     } 
+ }
+
+ .Active
+{
+    background-color: #567E3A;
+    color: white;
+ } 
+
+ @media only screen and (max-width: 600px) 
+ {
+     .Main
+     {
+         margin-top: 40px;
+         .Side
+         {
+             display: none;
+         }
+     }
+ }

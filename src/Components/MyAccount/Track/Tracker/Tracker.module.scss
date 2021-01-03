@@ -1,0 +1,205 @@
+.Main
+{
+    width: 70%;
+    margin-top: 50px;
+    height: 300px;
+    background-color:  #f2f2f2;
+    position: relative;
+    p
+    {
+        position: absolute;
+        top:120px;
+        left: 260px;
+        font-size: 20px;
+
+        span
+        {
+            display: block;
+        }
+    }
+
+    h4
+    {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    h3
+    {
+        position: absolute;
+        top: 40px;
+        left: 15px;
+        font-weight: lighter;
+    }
+    span
+    {
+        color: #97BC62FF;
+    }
+
+    .btnClass
+    {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        button
+        {
+            width: 100px;
+            height: 40px;
+            border: none;
+            font-size: 17px;
+            margin-right: 5px;
+            color: white;
+            
+            &:hover
+            {
+              border: 2px solid black;
+              cursor: pointer;
+            }
+
+            &:focus
+            {
+                outline: none;
+            }
+        }
+    }
+}
+
+.Holder
+{
+    position: absolute;
+    width: 100%;
+    left: 40px;
+    top: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 25px; ;
+}
+
+.Tracker
+{
+    width: 100px;
+    height: 10px;
+    background-color: lightgrey;
+    position: relative;
+    
+}
+.Mark
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:lightgrey;
+    position: absolute;
+    right: -1px;
+    top: -5px;
+    z-index: 1;
+}
+
+.Label
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    align-items: center;
+    font-size: 15px;
+    top: 35px;
+    left: -66px;
+    color: lightgray;
+    span
+    {
+        color:lightgray;
+    }
+}
+
+.ActiveLabel
+{
+    color: black;
+    font-weight: bolder;
+    span
+    {
+        color:black;
+    }
+}
+
+.TrackActive ,.Mark2
+{
+    background-color: #97BC62FF;
+}
+
+.Check
+{
+    color: lightgray;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+}
+
+
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #000;
+    animation: spinner .6s linear infinite;
+  }
+
+  @media only screen and (max-width: 600px)
+  {
+      .Main
+      {
+          width: 100%;
+          h4
+          {
+              font-size: 14px;
+          }
+          h3
+          {
+              font-size: 15px;
+          }
+          p
+          {
+              width: 100%;
+              left: 0px;
+              top: 140px;
+              font-size: 15px;
+          }
+          .btnClass
+          {
+              flex-direction: row;
+              top:72px;
+              left:15px;
+          }
+      }
+      .Label
+      {
+          font-size: 11px;
+          justify-content: space-around;
+      }
+
+      .Holder
+      {
+          left: 35px;
+          width: 89%;
+      }
+  }
+
+

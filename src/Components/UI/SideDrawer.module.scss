@@ -1,0 +1,53 @@
+.SideDrawer
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 45vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: white;
+    border-right: 1px solid black;
+
+    .Cross
+    {
+        position: absolute;
+        font-size: 21px;
+        right: 7px;
+        top: 2px;
+        cursor: pointer;
+    }
+    li:first-child
+    {
+        
+        border-top: 1px solid lightgray;
+        
+    }
+    ul
+    {
+        list-style: none;
+        margin-top: 70px;
+
+        
+    
+
+        li
+        {
+            width: 100%;
+            height: 58px;
+            padding-left: 10px;
+            padding-top: 19px;
+            font-size: 20px;
+            text-align: start;
+            font-weight: bolder;
+            border-bottom: 1px solid lightgray;
+            a
+            {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    
+}

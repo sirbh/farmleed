@@ -1,0 +1,77 @@
+.Header
+{
+    height: 60px;
+    z-index: 90;
+    background-color: #567E3A;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    justify-content: center;
+    div
+    {
+        
+        flex-wrap: wrap;
+    }
+ 
+}
+
+.Input
+{
+    text-decoration: none;
+    width: 90%;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 16px;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+    font-size: 16px;
+
+}
+
+.SearchBar
+{  
+    width: 50%;
+    margin:auto 0px;
+}
+
+.Holder
+{
+    width: 10%;
+    font-size: 30px;
+    color: white;
+    margin: auto 0px;
+}
+
+.Nav
+{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    a
+    {
+        position: relative;
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        .Icon
+        {
+           margin-right: 10px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .Header
+    {
+        display: none;
+    }
+  }

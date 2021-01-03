@@ -1,0 +1,62 @@
+
+.Message
+{
+    width: 600px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 103;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1px solid #567E3A;
+
+    h2,p
+    { 
+        text-align: start;
+        padding-left: 20px;
+        padding-top: 15px;
+        color: white;
+        font-weight: normal;
+        font-size: 30px;
+    }
+
+    p
+    {
+        font-size: 20px;
+        color: gray;
+    }
+
+    button
+    {
+        bottom: 10px;
+        right: 10px;
+        position: absolute;
+    }
+}
+
+.Head
+{
+    width: inherit;
+    height: 60px;
+    background-color: #567E3A;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) 
+{
+    .Message
+    {
+        width: 90vw;
+        height: 50vh; 
+        button
+        {
+            width: 150px;
+        }
+
+    }
+   
+}
+
